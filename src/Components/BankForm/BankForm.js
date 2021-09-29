@@ -104,7 +104,7 @@ export default function BankForm({
             <input type="input" className="form-control" id="amount" placeholder={label + ' Amount'} value={amount} onChange={e => setAmount(Number(e.currentTarget.value))}/><br/>
           </Fragment>
         }
-        <button type="submit" className="btn btn-light" disabled={(!hideAmount && (label === 'Withdraw' && !balance || !userLoged)) ? true : (balance && balance <= 0) } onClick={handleBankForm}>{label}</button>
+        <button type="submit" className="btn btn-light" disabled={(!hideAmount && (label === 'Withdraw' && (!balance || !userLoged))) ? true : (balance && balance <= 0) } onClick={handleBankForm}>{label}</button>
         </Fragment>
       ):(
         <Fragment>

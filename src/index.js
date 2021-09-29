@@ -38,7 +38,7 @@ function Spa() {
           <Suspense fallback = {<div>loading...</div>}>
             <NavBar />
             <div>
-              <UserContext.Provider>
+              <UserContext.Provider value={null}>
                 <div className="container" style={{ padding: "20px" }}>
                   <Route path='/' exact component={Home} /> 
                   <PublicRoute path='/createaccount' component={CreateAccount} />

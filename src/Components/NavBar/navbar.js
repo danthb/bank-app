@@ -36,7 +36,7 @@ export default function Nav() {
     return (
        
             
-        <nav  className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation">
+        <nav  className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
 
             <div className="container-fluid"  >
                 <NavLink className="nav-link active" aria-current="page" to="/">BadBank</NavLink>
