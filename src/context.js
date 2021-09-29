@@ -9,7 +9,7 @@ export function Card(props){
     }
 
     return (
-        <UserContext.Provider value={null}>
+        <UserContext.Provider value={""}>
     
             <div className={classes()} style={{ maxWidth: '18rem' }}>
                 <div className='card-header'>{props.header}</div>
