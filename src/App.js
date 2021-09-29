@@ -1,9 +1,7 @@
-import ReactDOM from 'react-dom';
 import React, { Suspense, lazy }  from 'react';
 import {BrowserRouter as Switch} from 'react-router-dom';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import { UserContext } from './context';
-import AuthProvider from './Components/Auth/AuthProvider';
 import './index.css';
 
 
@@ -17,16 +15,10 @@ const Balance       = lazy(() => import('./Components/Balance/balance'));
 const AllData       = lazy(() => import('./Components/AllData/alldata'));
 const PrivateRoute = lazy(() => import('./Components/Routers/PrivateRoute'))
 const PublicRoute  = lazy(() => import('./Components/Routers/PublicRoute'))
-/* const NotFound      = lazy(() => import('./Components/NotFound/notfound')); */
 
 
-/* const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
-console.log(domain)
-console.log(clientId) */
+export default function App() {
 
-export default function Spa() {
-/*   const auth = useAuth(); */
   return (
     
       <Router>
