@@ -14,7 +14,7 @@ export default function Balance() {
     }
     return (
       <Fragment>
- 
+        <h2> Welcome { auth.users[index].name}</h2>
           <Card
             bgcolor={'lightblue'}
             label="Balance"
