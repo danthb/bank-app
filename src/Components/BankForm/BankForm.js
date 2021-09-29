@@ -21,7 +21,7 @@ export default function BankForm({
 
   function getBalance(){
     let userLoged = auth.users.filter(user => user.isLogedU === true);
-    console.log(userLoged)
+    console.log('hiiiii')
     if (userLoged.length > 0) {
       setBalance(userLoged[0].balance)
       setUserLogged(true)
@@ -32,12 +32,14 @@ export default function BankForm({
   }
   useEffect(() => {
     if (!hideAmount) {
+      console.log('hiiiii')
       getBalance()
     }
   }, [show])
 
   function validateData(field, label){
     if (!field) {
+      console.log('hiiiii')
       setStatus('Error: missing ' + label);
       setTimeout(() => setStatus(''),3000);
       return false;
@@ -63,6 +65,20 @@ export default function BankForm({
     }
     handle(data)
     setShow(false);
+    console.log('user created')
+    console.log(data)
+    console.log(show)
+    console.log(status)
+    console.log(name)
+    console.log(email)
+    console.log(password)
+    console.log(amount)
+    console.log(balance)
+    console.log(userLoged)
+    console.log(hideAmount)
+    console.log(label)
+    console.log(balance)
+    console.log(userLoged)
   }  
   function clearForm(){
     setName('');
@@ -70,6 +86,7 @@ export default function BankForm({
     setPassword('');
     setAmount('');
     setShow(true);
+    console.log('hiiiii')
   }
 
 
